@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2979ff">
+    <title>Football-App</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="./assets/images/icon/apple-icon-60x60-dunplab-manifest-3324.png">
+    <link rel="icon" href="./assets/images/icon/favicon-96x96-dunplab-manifest-3324.png" sizes="96x96" type="image/png">
+    <!-- materialize-css -->
+    <link rel="stylesheet" href="./assets/libraries/materialize-css/css/materialize.min.css">
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- my style -->
+    <link rel="stylesheet" href="./assets/styles/main.css">
+</head>
+<body class="blue-grey darken-4 white-text">
+    <header>
+        <nav class="blue accent-3">
+            <div class="nav-wrapper container">
+                <a href="#!" class="brand-logo">Football</a>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="topnav right hide-on-med-and-down"></ul>
+                <ul class="sidenav blue accent-2" id="nav-mobile"></ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <div class="row" id="content-body">
+            <!-- content disini -->
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="center-align">
+        Made with love by Enrico F.K
+    </footer>
+
+    <!-- scripts -->
+    <script src="./assets/libraries/materialize-css/js/materialize.min.js"></script>
+    <script src="./assets/libraries/idb/idb.js"></script>
+    <script src="./assets/scripts/data/db.js"></script>
+    <script src="./assets/scripts/app.js" type="module"></script>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('sw.js')
+            .then((registration) => console.log('serviceWorker: pendaftaran berhasil', registration.scope))
+            .catch((err) => console.error('serviceWorker: pendaftaran gagal', err))
+        }else{
+            console.error('Browser ini tidak mendukung serviceWorker');
+        }
+    </script>
+</body>
+</html>
