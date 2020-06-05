@@ -80,5 +80,6 @@
 			"type": "image/png",
 			"sizes": "16x16"
 		}
-	]
+	],
+	"gcm_sender_id": "810879853303"
 }

@@ -5,7 +5,7 @@ class GroupTable extends HTMLElement {
 	}
 
 	render() {
-		let tr = '';
+		let tr = "";
 		this._group.table.forEach((clubItem) => {
 			tr += `<tr>
 			<td>${clubItem.position}</td>
@@ -20,7 +20,10 @@ class GroupTable extends HTMLElement {
 			<td>${clubItem.draw}</td>
 		</tr>`;
 		});
-		this.innerHTML = `<h6>${this._group.group || this._group.stage}</h6>`;
+		this.innerHTML = `<h6 class="blue-text">${
+			this._group.group.replace(/_/g, " ") ||
+			this._group.stage.replace(/_/g, " ")
+		}</h6>`;
 		this.innerHTML += `
         <table class="highlight responsive-table mb-3 centered border-bottom">
         <thead>
@@ -40,4 +43,4 @@ class GroupTable extends HTMLElement {
 	}
 }
 
-window.customElements.define('group-table', GroupTable);
+window.customElements.define("group-table", GroupTable);

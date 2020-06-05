@@ -23,7 +23,7 @@
                 <a href="#!" class="brand-logo">Football</a>
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="topnav right hide-on-med-and-down"></ul>
-                <ul class="sidenav blue accent-2" id="nav-mobile"></ul>
+                <ul class="sidenav blue accent-4" id="nav-mobile"></ul>
         </nav>
     </header>
     
@@ -42,15 +42,13 @@
     <script src="./assets/libraries/materialize-css/js/materialize.min.js"></script>
     <script src="./assets/libraries/idb/idb.js"></script>
     <script src="./assets/scripts/data/db.js"></script>
-    <script src="./assets/scripts/app.js" type="module"></script>
-    <script>
-        if('serviceWorker' in navigator){
-            navigator.serviceWorker.register('sw.js')
-            .then((registration) => console.log('serviceWorker: pendaftaran berhasil', registration.scope))
-            .catch((err) => console.error('serviceWorker: pendaftaran gagal', err))
-        }else{
-            console.error('Browser ini tidak mendukung serviceWorker');
-        }
-    </script>
+    <script src="./assets/scripts/data/api.js"></script>
+    <script src="./assets/scripts/components/GroupTable.js"></script>
+    <script src="./assets/scripts/components/GroupsList.js"></script>
+    <script src="./assets/scripts/components/matches/MatchCard.js"></script>
+    <script src="./assets/scripts/view/main.js"></script>
+    <script src="./assets/scripts/view/nav.js"></script>
+    <script src="./assets/scripts/notification.js"></script>
+    <script src="./assets/scripts/regist-sw.js"></script>
 </body>
 </html>
